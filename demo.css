@@ -1,0 +1,108 @@
+:root {
+  scroll-behavior: smooth;
+}
+#servicesSection::after{
+  content: "";
+  width: 50%;
+  aspect-ratio: 1/1;
+  display: inline-block;
+  background-color: rgb(29, 39, 60);
+  position: absolute;
+  top: 15%;
+  left: -5%;
+  border-radius: 84% 95% 26% 139% / 71% 157% 26% 85%;
+  z-index: -1;
+}
+#servicesSection::before{
+  content: "";
+  width: 50%;
+  aspect-ratio: 1/1;
+  display: inline-block;
+  background-color: rgb(29, 39, 60);
+  position: absolute;
+  top: 0%;
+  right: -5%;
+  border-radius: 35% 71% 22% 74% / 42% 100% 15% 69%;
+  z-index: -1;
+}
+
+@media (min-width: 768px) {
+  #servicesSection::after{
+    top: 30% !important;
+    width: 40% !important;
+  }
+  #servicesSection::before {
+    width: 40% !important;
+
+  }
+}
+
+.slide {
+  opacity: 0;
+}
+
+.slide[data-active] {
+  opacity: 1;
+}
+
+
+/* @font-face {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 100;
+  src: url("./font/static/Montserrat-Thin.ttf") format("truetype")
+}
+@font-face {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 200;
+  src: url("./font/static/Montserrat-ExtraLight.ttf") format("truetype")
+}
+@font-face {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 300;
+  src: url("./font/static/Montserrat-Light.ttf") format("truetype")
+}
+@font-face {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 400;
+  src: url("./font/static/Montserrat-Regular.ttf") format("truetype")
+}
+@font-face {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 500;
+  src: url("./font/static/Montserrat-Medium.ttf") format("truetype")
+}
+@font-face {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 600;
+  src: url("./font/static/Montserrat-SemiBold.ttf") format("truetype")
+}
+@font-face {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 700;
+  src: url("./font/static/Montserrat-Bold.ttf") format("truetype")
+}
+@font-face {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 800;
+  src: url("./font/static/Montserrat-ExtraBold.ttf") format("truetype")
+}
+@font-face {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 900;
+  src: url("./font/static/Montserrat-Black.ttf") format("truetype")
+} */
+
+@font-face {
+  font-family: 'Montserrat';
+  font-style: normal;
+  src: url("./font/Montserrat-VariableFont_wght.ttf") format("truetype")
+}

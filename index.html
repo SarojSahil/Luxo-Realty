@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./output.css">
+  <link rel="stylesheet" href="./demo.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+  <title>LUXO REALTY</title>
+</head>
+
+<body class="relative z-0 bg-darkbg font-monserrat">
+  <!-- Default Navbar -->
+  <nav class="p-3 md:px-20 flex bg-darkbg items-center justify-between sticky top-0 left-0 z-10">
+    <a href="">
+      <img class="max-w-14 max-h-14 object-cover" src="./images/8507-removebg-preview (1).png" alt="">
+    </a>
+    <div class="md:flex gap-4 hidden">
+      <a href="#aboutSection" class="hover:text-gray-400 text-white text-lg">About</a>
+      <a href="#servicesSection" class="hover:text-gray-400 text-white text-lg">Services</a>
+      <a href="#testimonialSection" class="hover:text-gray-400 text-white text-lg">Testmonials</a>
+      <a href="#contactSection" class="hover:text-gray-400 text-white text-lg">Contacts</a>
+      <a href="http://" class="hover:text-gray-400 text-white text-lg">
+        <i class="fa-brands fa-facebook-f"></i>
+      </a>
+      <a href="http://" class="hover:text-gray-400 text-white text-xl">
+        <i class="fa-brands fa-linkedin-in"></i>
+      </a>
+      <a href="http://" class="hover:text-gray-400 text-white text-xl">
+        <i class="fa-brands fa-instagram"></i>
+      </a>
+    </div>
+    <!-- Hamburger Open -->
+    <button class="text-white md:hidden" onclick="handleButtonClick()"><i class="fa-solid fa-bars text-xl"></i></button>
+    <!-- Overlapping Navbar  -->
+    <div id="nav-dialog" class="hidden fixed inset-0 z-20 bg-darkbg">
+      <nav class="p-3 flex items-center justify-between">
+        <a href="http://google.com">
+          <img class="max-w-14 max-h-14 object-cover" src="./images/logo.png" alt="">
+        </a>
+        <!-- Hamburger Close -->
+        <button class="text-white md:hidden" onclick="handleButtonClick()"><i
+            class="fa-solid fa-xmark text-2xl"></i></button>
+      </nav>
+      <!-- Links -->
+      <div>
+        <a href="#aboutSection" class="hover:text-gray-400 text-white block p-4 text-lg"
+          onclick="handleButtonClick()">About</a>
+        <a href="#servicesSection" class="hover:text-gray-400 text-white block p-4 text-lg"
+          onclick="handleButtonClick()">Services</a>
+        <a href="#testimonialSection" class="hover:text-gray-400 text-white block p-4 text-lg"
+          onclick="handleButtonClick()">Testmonials</a>
+        <a href="#contactSection" class="hover:text-gray-400 text-white block p-4 text-lg"
+          onclick="handleButtonClick()">Contacts</a>
+        <div class="px-10 py-4 flex gap-8">
+          <a href="http://" class="hover:text-gray-400 text-white text-lg">
+            <i class="fa-brands fa-facebook-f"></i>
+          </a>
+          <a href="http://" class="hover:text-gray-400 text-white text-xl">
+            <i class="fa-brands fa-linkedin-in"></i>
+          </a>
+          <a href="http://" class="hover:text-gray-400 text-white text-xl">
+            <i class="fa-brands fa-instagram"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Section  -->
+  <section class="md:bg-[url('./images/header-bg.jfif')] bg-[length:100%] bg-no-repeat ">
+    <div
+      class="md:bg-none bg-[url('./images/header-bg.jfif')] bg-[length:100%] bg-no-repeat p-[80px] text-3xl md:text-5xl font-semibold text-center flex-wrap text-white">
+      Luxo Realty</div>
+
+    <div
+      class="bg-slate-900 md:bg-transparent flex justify-center gap-3 flex-wrap px-4 py-4 md:pb-8 text-center text-white">
+      <div class="max-w-[320px] bg-secondary opacity-85 rounded-xl p-4">
+        <div class="text-2xl font-bold p-4 text-white">Discover</div>
+        <div class="text-base font-light">
+          Embark on journey to find your ideal property with our expert guidance and comprehensive services.
+        </div>
+        <a class="text-lg pt-8 block" href="#servicesSection">Services <i
+            class="fa-solid fa-chevron-right text-sm"></i></a>
+      </div>
+      <div class="max-w-[320px] bg-primary opacity-85 rounded-xl p-4">
+        <div class="text-2xl font-bold p-4 text-white">Empower</div>
+        <div class="text-base font-light">
+          Take control of your real estate decisions with our knowledgeable team supporting you every step of the way.
+        </div>
+        <a class="text-lg pt-8 block" href="#servicesSection">Services <i
+            class="fa-solid fa-chevron-right text-sm"></i></a>
+      </div>
+      <div class="max-w-[320px] bg-secondary opacity-85 rounded-xl p-4">
+        <div class="text-2xl font-bold p-4 text-white">Experience</div>
+        <div class="text-base font-light">
+          Immerse yourself in a seamless real estate experience, focusing on your unique needs and aspirations.
+        </div>
+        <a class="text-lg pt-8 block" href="#servicesSection">Services <i
+            class="fa-solid fa-chevron-right text-sm"></i></a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Out Story Section  -->
+  <section id="aboutSection"
+    class="text-white px-4 pt-10 md:pt-28 mx-auto flex max-w-5xl gap-2 md:gap-8 flex-col md:flex-row">
+    <div class="md:text-right text-[2.5rem] leading-10 md:text-6xl font-bold">Our <br /> story</div>
+    <div
+      class="w-20 md:w-4 h-[2px] md:h-32 from-blue-400 to-blue-800 bg-gradient-to-r md:bg-gradient-to-b rounded-full">
+    </div>
+    <div>
+      <div class="text-2xl md:text-5xl font-bold py-2">Luxo Realty</div>
+      <div class="text-lg font-base">Luxo realty is more than just a real estate company; we are a dedicated team
+        passionate about helping you navigate the property market. Our commitment lies in providing exceptional service
+        whether you're looking to buy, sell, rent, or find the perfect shop or home. With our expertise and a
+        client-centered approach, we strive to make your real estate journey smooth and successful. Join us as we work
+        together to realize your property dreams.</div>
+    </div>
+  </section>
+
+  <!-- Our Services Section  -->
+  <section id="servicesSection" class="relative text-white text-center px-6 pt-10 md:pt-24 overflow-hidden">
+    <div class="text-3xl md:text-5xl py-4 font-bold">Our services</div>
+    <div class="py-4 text-lg md:text-lg">Comprehensive services to enhance your real estate experience</div>
+    
+    <div
+      class="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-x-4 gap-y-8 mx-auto lg:max-w-4xl xl:max-w-6xl py-10 justify-items-center">
+      <div class="bg-primary flex rounded-xl max-w-sm">
+        <div class="w-20 flex-shrink-0 bg-primary-90 rounded-l-xl flex items-center justify-center">
+          <i class="fa-solid fa-chevron-right text-lg font-bold text-white"></i>
+        </div>
+        <div class="text-left py-6 px-4">
+          <div class="pb-2 text-xl font-semibold">Buying</div>
+          <div class="text-base font-light">Expert assistance in finding your dream property.</div>
+        </div>
+      </div>
+      <div class="bg-primary flex rounded-xl max-w-sm">
+        <div class="w-20 flex-shrink-0 bg-primary-90 rounded-l-xl flex items-center justify-center">
+          <i class="fa-solid fa-chevron-right text-lg font-bold text-white"></i>
+        </div>
+        <div class="text-left py-6 px-4">
+          <div class="pb-2 text-xl font-semibold">Selling</div>
+          <div class="text-base font-light">Strategic marketing to maximize your property's value.</div>
+        </div>
+      </div>
+      <div class="bg-primary flex rounded-xl max-w-sm">
+        <div class="w-20 flex-shrink-0 bg-primary-90 rounded-l-xl flex items-center justify-center">
+          <i class="fa-solid fa-chevron-right text-lg font-bold text-white"></i>
+        </div>
+        <div class="text-left py-6 px-4">
+          <div class="pb-2 text-xl font-semibold">Renting</div>
+          <div class="text-base font-light">Support in securing the best rental agreements.</div>
+        </div>
+      </div>
+      <div class="bg-primary flex rounded-xl max-w-sm">
+        <div class="w-20 flex-shrink-0 bg-primary-90 rounded-l-xl flex items-center justify-center">
+          <i class="fa-solid fa-chevron-right text-lg font-bold text-white"></i>
+        </div>
+        <div class="text-left py-6 px-4">
+          <div class="pb-2 text-xl font-semibold">Commercial Properties</div>
+          <div class="text-base font-light">Guidance in finding the right space for your business.</div>
+        </div>
+      </div>
+      <div class="bg-primary flex rounded-xl max-w-sm">
+        <div class="w-20 flex-shrink-0 bg-primary-90 rounded-l-xl flex items-center justify-center">
+          <i class="fa-solid fa-chevron-right text-lg font-bold text-white"></i>
+        </div>
+        <div class="text-left py-6 px-4">
+          <div class="pb-2 text-xl font-semibold">Market Analysis</div>
+          <div class="text-base font-light">In-depth insights to inform your real estate decisions.</div>
+        </div>
+      </div>
+      <div class="bg-primary flex rounded-xl max-w-sm">
+        <div class="w-20 flex-shrink-0 bg-primary-90 rounded-l-xl flex items-center justify-center">
+          <i class="fa-solid fa-chevron-right text-lg font-bold text-white"></i>
+        </div>
+        <div class="text-left py-6 px-4">
+          <div class="pb-2 text-xl font-semibold">Consultation Services</div>
+          <div class="text-base font-light">Personalized advice tailored to your real estate needs.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Tesimonial Section  -->
+  <section id="testimonialSection" data-carousel class="relative w-full h-72 md:h-96 lg:h-72 z-0 my-28">
+    <button data-carousel-button="prev"
+      class="z-[1] carousel-button prev absolute top-1/2 translate-y-[-50%] left-4 bg-gray-300 rounded-full w-10 h-10"><i
+        class="fa-solid fa-angles-left text-darkBg"></i></button>
+    <button data-carousel-button="next"
+      class="z-[1] carousel-button next absolute top-1/2 translate-y-[-50%] right-4 bg-gray-300 rounded-full w-10 h-10"><i
+        class="fa-solid fa-angles-right text-darkbg"></i></button>
+    <div data-slides>
+      <div data-active class="slide absolute inset-0 text-white text-center w-[70%] left-1/2 translate-x-[-50%]">
+        <div class="text-lg font-medium pb-10">Shivam Pandey</div>
+        <p class="text-xl md:text-4xl font-semibold">Luxo realty transformed my home-buying experience! Their team was
+          knowledgeable and supportive throughout the process. I found my dream home with ease.</p>
+      </div>
+      <div class="slide absolute inset-0 text-white text-center w-[70%] left-1/2 translate-x-[-50%]">
+        <div class="text-lg font-medium pb-10">Siddhesh Mune</div>
+        <p class="text-xl md:text-4xl font-semibold">Luxo realty is fantastic! Their selling strategy helped me get top
+          dollar for my property. The entire process was smooth and stress-free.</p>
+      </div>
+      <div class="slide absolute inset-0 text-white text-center w-[70%] left-1/2 translate-x-[-50%]">
+        <div class="text-lg font-medium pb-10">Akash Sonkar</div>
+        <p class="text-xl md:text-4xl font-semibold">I love working with Luxo realty! Their rental services are
+          exceptional, and they truly care about finding the right fit for me. Highly recommend!</p>
+      </div>
+    </div>
+    <div data-carousel-indicators class="absolute bottom-0 left-[50%] translate-x-[-50%] flex gap-2">
+      <div data-active-indicator class="bg-primary w-2 h-2 rounded-full"></div>
+      <div class="w-2 h-2 bg-white rounded-full"></div>
+      <div class="w-2 h-2 bg-white rounded-full"></div>
+    </div>
+  </section>
+
+  <!-- Infinite Scroll  -->
+  <section>
+    <marquee behavior="scroll" class="text-darkBlue bg-white py-10 text-2xl font-bold flex gap-8">
+      <span class="px-8">Your journey to finding the perfect property starts here.</span>
+      <span class="px-8">Your journey to finding the perfect property starts here.</span>
+      <span class="px-8">Your journey to finding the perfect property starts here.</span>
+      <span class="px-8">Your journey to finding the perfect property starts here.</span>
+      <span class="px-8">Your journey to finding the perfect property starts here.</span>
+    </marquee>
+  </section>
+
+  <!-- Contact Section  -->
+  <section id="contactSection"
+    class="px-10 py-12 text-white max-w-lg md:max-w-6xl md:gap-10 mx-auto grid grid-cols-1 md:grid-cols-2">
+    <div>
+      <img src="./images/contact.jpeg" class="rounded-lg">
+    </div>
+    <div>
+      <div class="pt-4 text-4xl font-bold">Get in touch with us</div>
+      <p class="pt-2 text-xl font-light">Contact us today for more information about our services.</p>
+      <div class="flex flex-col md:flex-row justify-between text-xl font-light pt-4 gap-y-4">
+        <a href="mailto:luxorealtyone@gmail.com"><i class="fa-solid fa-envelope text-primary"></i>&nbsp;
+          luxorealtyone@gmail.com</a>
+        <a href="tel:7020743518"><i class="fa-solid fa-phone text-primary"></i>&nbsp; +91- 7020743518</a>
+      </div>
+      <form class="pt-12" onsubmit="handleFormSubmit(event)">
+        <div>
+          <label for="name" class="block text-md">Name</label>
+          <input type="text" name="name" id="name"
+            class="text-lg block w-full rounded-lg p-3 mt-[8px] text-black placeholder:text-gray-400"
+            placeholder="Your name here" required />
+        </div>
+        <div>
+          <label for="email" class="block text-md pt-2">Phone </label>
+          <input type="text" name="Phone" id="email"
+            class="text-lg block w-full rounded-lg p-3 mt-[8px] text-black placeholder:text-gray-400"
+            placeholder="Your Phone here" required />
+        </div>
+        <div>
+          <label for="message" class="block text-md pt-2">Message</label>
+          <textarea type="text" rows="4" name="message" id="message"
+            class="resize-none text-lg block w-full rounded-lg p-3 mt-[8px] text-black placeholder:text-gray-400"
+            placeholder="You message here" required></textarea>
+        </div>
+        <div>
+          <button id="submitButton"
+            class="hover:bg-red-600 mt-8 text-md md:text-md min-w-[150px] from-primary to-secondary bg-gradient-to-b py-3 rounded-lg">Send message</button>
+        </div>
+      </form>
+    </div>
+  </section>
+
+  <!-- Footer  -->
+  <footer class="text-white gap-y-2 md:px-20 py-8 flex flex-col-reverse md:flex-row md:justify-between md:items-center">
+    <div class="text-md font-thin text-center">@ All Rights Reserved Luxo Realty</div>
+    <div class="flex gap-x-4 justify-center text-2xl">
+      <a href="http://"
+        class="w-[40px] h-[40px] rounded-lg from-primary to-secondary bg-gradient-to-b grid place-content-center">
+        <i class="fa-brands fa-facebook-f"></i>
+      </a>
+      <a href="http://"
+        class="w-[40px] h-[40px] rounded-lg from-primary to-secondary bg-gradient-to-b grid place-content-center">
+        <i class="fa-brands fa-linkedin-in"></i>
+      </a>
+      <a href="http://"
+        class="w-[40px] h-[40px] rounded-lg from-primary to-secondary bg-gradient-to-b grid place-content-center">
+        <i class="fa-brands fa-instagram"></i>
+      </a>
+    </div>
+  </footer>
+
+  <!-- Modal for form submission -->
+  <div id="formSubmissionModal"
+    class="hidden place-content-center fixed inset-0 z-30 bg-darkbg bg-opacity-30 backdrop-blur-sm">
+    <div class="rounded-lg w-[280px] bg-white mx-3 p-4 text-center">
+      <i class="fa-solid fa-circle-check text-6xl"></i>
+      <div class="text-lg font-bold">Success</div>
+      <div class="font-normal mt-4">Message sent successfully.</div>
+      <div class="font-normal">We will see you soon!</div>
+      <button class="min-w-[160px] bg-darkbg text-white rounded-lg p-2 mt-4"
+        onclick="handleFormSubmitModal()">OK</button>
+    </div>
+  </div>
+</body>
+<script>
+
+  // Navbar Toggle 
+  const navDialog = document.querySelector("#nav-dialog");
+
+  function handleButtonClick() {
+    navDialog.classList.toggle("hidden");
+  }
+
+  // Form Submission
+  async function handleFormSubmit(event) {
+    event.preventDefault();
+
+    const formdata = new FormData(event.target);
+    const url = "https://script.google.com/macros/s/AKfycbxQiNuFlFFVWEklKLVIl2Fyi8vwjS2dzCZk-JWV6bRz_j1b2F23opFT6ctdEKub8owZLg/exec";
+
+    const response = await fetch(url,
+      {
+        method: "POST",
+        body: formdata,
+      }
+    );
+    const jsonData = await response.json();
+
+    if (jsonData.status == "success") {
+      handleFormSubmitModal();
+    }
+    else {
+      console.log("error");
+    }
+  }
+
+  function handleFormSubmitModal() {
+    const modal = document.querySelector("#formSubmissionModal");
+    modal.classList.toggle("hidden");
+    modal.classList.toggle("grid");
+    setTimeout(() => {
+    modal.classList.toggle("grid");
+    modal.classList.toggle("hidden");
+  }, 3000);
+  }
+
+  // carousel Logic 
+  const buttons = document.querySelectorAll(".carousel-button");
+  buttons.forEach((button) => {
+    button.addEventListener("click", () => {
+      const offset = button.dataset.carouselButton == "next" ? 1 : -1;
+      const slides = button.closest("[data-carousel]").querySelector("[data-slides]");
+      const activeSlide = slides.querySelector("[data-active]");
+      const length = slides.children.length;
+      let newIndex = [...slides.children].indexOf(activeSlide) + offset;
+
+      if (newIndex < 0) {
+        newIndex = length - 1;
+      }
+      else if (newIndex >= length) {
+        newIndex = 0;
+      }
+      slides.children[newIndex].dataset.active = true;
+      delete activeSlide.dataset.active;
+
+      const indicators = document.querySelector("[data-carousel-indicators]");
+      let activeIndicator = indicators.querySelector("[data-active-indicator]");
+      activeIndicator.classList.remove("bg-primary");
+      activeIndicator.classList.add("bg-white");
+      delete activeIndicator.dataset.activeIndicator;
+      const newIndicator = indicators.children[newIndex];
+      newIndicator.classList.remove("bg-white");
+      newIndicator.classList.add("bg-primary");
+      newIndicator.dataset.activeIndicator = true;
+    });
+  });
+
+  window.addEventListener("DOMContentLoaded", () => {
+    setInterval(() => {
+      buttons[1].click();
+    }, 5000);
+  });
+
+  //App Script
+  function doPost(e) {
+    const sheet = SpreadsheetApp.getActiveSpreadsheet().getActiveSheet();
+
+    const name = e.parameter.name;
+    const email = e.parameter.email;
+    const message = e.parameter.message;
+
+    sheet.insertRowAfter(1);
+    sheet.getRange(2, 1, 1, 3).setValues([[name, email, message]]);
+
+    const response = {
+      status: "success"
+    }
+
+    return ContentService
+      .createTextOutput(JSON.stringify(response))
+      .setMimeType(ContentService.MimeType.JSON);
+  }
+
+</script>
+
+</html>
